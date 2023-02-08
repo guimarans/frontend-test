@@ -1,0 +1,10 @@
+body {
+    background-color: map-get($colors, black-shade);
+}
+
+.container {
+    width: 100%;
+    @media screen and (min-width: 360px) {
+        max-width: 340px;
+    }
+}
