@@ -8,9 +8,6 @@ export class ParticipantesController {
         this.participanteView = new ParticipanteView('#ranking');
     }
     listaParticipantes() {
-        this.importarDados();
-    }
-    importarDados() {
         this.ordernarLista();
     }
     ordernarLista() {

@@ -8,15 +8,9 @@ export class ParticipantesController {
     private participantesServices = new ParticipantesServices();
     private participanteView = new ParticipanteView('#ranking');
     
-    constructor() { 
-        
-    }
+    constructor() {}
 
     public listaParticipantes(){
-        this.importarDados();
-    }
-
-    private importarDados(): void {
         this.ordernarLista();
     }
 
