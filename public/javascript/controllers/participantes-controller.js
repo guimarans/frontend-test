@@ -11,8 +11,19 @@ export class ParticipantesController {
         this.importarDados();
     }
     importarDados() {
+        this.ordernarLista();
+    }
+    ordernarLista() {
         this.participantesServices.obterParticipantes()
             .then(participantes => {
+            participantes.sort((a, b) => {
+                if (a.porcentagemPositiva < b.porcentagemPositiva) {
+                    return -1;
+                }
+                else {
+                    return 1;
+                }
+            }).reverse();
             for (let participante of participantes) {
                 this.participantes.adicionar(participante);
             }
