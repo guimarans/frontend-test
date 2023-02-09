@@ -11,7 +11,7 @@ export class ParticipanteView extends View<Participantes>{
             <div class="ranking__item tooltip">
                 <div class="row">
                     <figure class="ranking__picture">
-                    <img src="${participante.picture}" alt="${participante.name}">
+                    <img src="${participante.picture}" alt="${participante.name}" loading="lazy">
                     <figcaption class="ranking__picture--position">
                         ${posicao++}
                     </figcaption>
