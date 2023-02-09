@@ -1,0 +1,1 @@
+{"version":3,"file":"participante.js","sourceRoot":"","sources":["../../../src/javascript/models/participante.ts"],"names":[],"mappings":"AAAA,MAAM,OAAO,YAAY;IAErB,YACoB,IAAY,EACZ,WAAmB,EACnB,OAAe,EACf,WAA0B,CAAC,EAC3B,WAAyB,CAAC;QAJ1B,SAAI,GAAJ,IAAI,CAAQ;QACZ,gBAAW,GAAX,WAAW,CAAQ;QACnB,YAAO,GAAP,OAAO,CAAQ;QACf,aAAQ,GAAR,QAAQ,CAAmB;QAC3B,aAAQ,GAAR,QAAQ,CAAkB;IAC3C,CAAC;CACP"}
