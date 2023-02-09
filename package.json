@@ -9,7 +9,7 @@
     "start": "concurrently \"npm run scss\" \"npm run watch\" \"npm run server\"",
     "compile": "tsc",
     "watch": "tsc -watch",
-    "scss": "sass -watch src/stylesheets/**/*.scss:public/stylesheets/**/*.scss"
+    "scss": "sass --watch src/stylesheets/:public/stylesheets/"
   },
   "author": "Kelly Guimarans",
   "license": "ISC",
@@ -20,7 +20,6 @@
   "devDependencies": {
     "concurrently": "^6.0.0",
     "lite-server": "^2.6.1",
-    "node-sass": "^4.9.0",
     "sass": "^1.58.0",
     "typescript": "^4.9.5"
   }
