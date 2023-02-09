@@ -3,15 +3,17 @@ import { View } from "./view.js";
 
 export class ParticipanteView extends View<Participantes>{
     protected template(model: Participantes): string {
+        
+        let posicao: number = 1;
         return `
-        ${model.lista().forEach((participante, i) => {
+        ${model.lista().map((participante) => {
             return `
             <div class="ranking__item tooltip">
                 <div class="row">
                     <figure class="ranking__picture">
                     <img src="${participante.picture}" alt="${participante.name}">
                     <figcaption class="ranking__picture--position">
-                        ${i++}
+                        ${posicao++}
                     </figcaption>
                     </figure>
                     <div class="ranking__info">
@@ -29,13 +31,13 @@ export class ParticipanteView extends View<Participantes>{
                     </thead>
                     <tbody>
                     <tr>
-                        <td>${participante.positive || 0}</td>
-                        <td>${participante.negative || 0}</td>
+                        <td>${(participante.porcentagemPositiva || 0).toFixed(0)}%</td>
+                        <td>${(participante.porcentagemNegativa || 0).toFixed(0)}%</td>
                     </tr>
                     </tbody>
                 </table>
                 </div>
             `;
-        })}`;
+        }).join('')}`;
     }
 }
