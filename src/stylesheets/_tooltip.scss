@@ -1,0 +1,30 @@
+.tooltip {
+    &__content{
+        display: none;
+        border-radius: 4px;
+
+        thead {
+            background-color: map-get($colors, red);
+            th {
+                color: map-get($colors, white-complementary);
+                font-size: 0.625rem;
+                text-align: center;
+                font-weight: bold;
+                text-transform: uppercase;
+                padding: 6px 12px;
+            }    
+        }
+
+        tbody {
+            background-color: map-get($colors, white);
+            td { 
+                color: map-get($colors, gray-shade);
+                font-size: 1.5rem; 
+                font-weight: bold;
+                text-align: center;
+                letter-spacing: -1spx;
+                padding: 8px 12px;
+            }
+        }
+    }
+}

@@ -61,8 +61,9 @@ body {
   width: 100%;
   padding: 1rem;
   margin: auto;
+  max-width: 310px;
 }
-@media screen and (min-width: 360px) {
+@media (min-width: 420px) {
   .container {
     max-width: 374px;
   }
@@ -103,7 +104,7 @@ main #ranking__info {
   grid-area: ranking-info;
 }
 
-body main .ranking__content, body header, body {
+body main .ranking__content, body main .ranking__item, body header, body {
   display: grid;
 }
 
@@ -114,7 +115,11 @@ body header {
   grid-template-rows: 1fr 52px;
   grid-template-areas: "logo ." "logo titulo";
 }
+body main .ranking__item {
+  gap: 18px 14px;
+}
 body main .ranking__content {
+  grid-template-columns: 76px 1fr;
   grid-template-areas: "ranking-picture ranking-info";
 }
 
@@ -125,21 +130,37 @@ header {
 }
 header picture img {
   position: absolute;
-  left: 0;
+  left: -12px;
   top: 20px;
+}
+@media (min-width: 420px) {
+  header picture {
+    left: 0;
+  }
 }
 header h1 {
   justify-content: flex-end;
   color: #272727;
   font-size: 1.875rem;
   font-weight: bold;
+  padding: 0 1rem 0 4rem;
   letter-spacing: -3px;
   text-transform: uppercase;
-  padding: 0 2.625rem 0 5rem;
   background-color: #ffffff;
   border-radius: 2px;
 }
+@media (min-width: 420px) {
+  header h1 {
+    padding: 0 2.625rem 0 5rem;
+  }
+}
 
+.ranking {
+  /** alteracoes de hover **/
+}
+.ranking__item {
+  border-radius: 2px;
+}
 .ranking__item:nth-child(odd) {
   background-color: #ffffff;
 }
@@ -152,11 +173,12 @@ header h1 {
 }
 .ranking__picture img {
   display: block;
-  width: 100%;
-  height: 66px;
-  border: 3px solid #ba3638;
+  width: 59px;
+  height: 58px;
+  border: 4px solid #ba3638;
 }
 .ranking__bullet {
+  position: absolute;
   justify-content: center;
   width: 1.25rem;
   height: 1.25rem;
@@ -164,6 +186,66 @@ header h1 {
   font-weight: bold;
   color: #707070;
   border: 2px solid #707070;
+  background-color: #ffffff;
+  bottom: -2px;
+  right: 0;
+}
+.ranking__bullet:hover {
+  cursor: default;
+}
+.ranking__info:hover {
+  cursor: default;
+}
+.ranking__info h2 {
+  font-size: 1.125rem;
+  color: #ba3638;
+}
+.ranking__info p {
+  font-size: 0.75rem;
+  color: #909090;
+}
+.ranking__item:hover:not(.tooltip__content) {
+  background-color: #ba3638;
+  /** habilita o tooltip com o hover **/
+}
+.ranking__item:hover:not(.tooltip__content) .ranking__picture img {
+  border: 4px solid #ffffff;
+}
+.ranking__item:hover:not(.tooltip__content) .ranking__info h2 {
+  color: #ffffff;
+}
+.ranking__item:hover:not(.tooltip__content) .ranking__info p {
+  color: #330d0e;
+}
+.ranking__item:hover:not(.tooltip__content) .tooltip__content {
+  display: block;
+}
+
+.tooltip__content {
+  display: none;
+  border-radius: 4px;
+}
+.tooltip__content thead {
+  background-color: #ba3638;
+}
+.tooltip__content thead th {
+  color: #f8f7f7;
+  font-size: 0.625rem;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 6px 12px;
+}
+.tooltip__content tbody {
+  background-color: #ffffff;
+}
+.tooltip__content tbody td {
+  color: #909090;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: -1spx;
+  padding: 8px 12px;
 }
 
 /*# sourceMappingURL=style.css.map */

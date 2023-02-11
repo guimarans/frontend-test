@@ -5,8 +5,12 @@ header {
     picture { 
         img {
             position: absolute;
-            left: 0;
+            left: -12px;
             top: 20px;
+        }
+
+        @media(min-width: 420px) { 
+            left: 0;
         }
     }
 
@@ -16,10 +20,14 @@ header {
         color: map-get($colors, black-shade);
         font-size: 1.875rem;
         font-weight: bold;
+        padding: 0 1rem 0 4rem;
         letter-spacing: -3px;
         text-transform: uppercase;
-        padding: 0 2.625rem 0 5rem;
         background-color: map-get($colors, white);
         border-radius: 2px;
+        
+        @media(min-width: 420px) {
+            padding: 0 2.625rem 0 5rem;
+        }
     }
 }
