@@ -1,0 +1,40 @@
+header { grid-area: header; 
+    picture { grid-area: logo;}
+    h1 {grid-area: titulo}
+}
+
+main {
+    grid-area: main;
+    #ranking { grid-area: ranking; 
+        &__content { grid-area: ranking-content }
+        &__picture { grid-area: ranking-picture }
+        &__info {grid-area: ranking-info; }
+    }
+}
+
+%grid { display: grid; }
+
+body {
+    @extend %grid;
+    grid-template-areas: 
+        "header"
+        "main";
+
+    header {
+        @extend %grid;
+        grid-template-rows: 1fr 52px;
+        grid-template-areas: 
+            "logo ."
+            "logo titulo";
+    }
+
+    main {
+        .ranking {
+            &__content {
+                @extend %grid;
+                grid-template-areas: 
+                    "ranking-picture ranking-info"
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+header {
+    position: relative;
+    margin-bottom: 15px;
+    min-height: 190px;
+    picture { 
+        img {
+            position: absolute;
+            left: 0;
+            top: 20px;
+        }
+    }
+
+    h1 {
+        @extend %align-items-center;
+        justify-content: flex-end;
+        color: map-get($colors, black-shade);
+        font-size: 1.875rem;
+        font-weight: bold;
+        letter-spacing: -3px;
+        text-transform: uppercase;
+        padding: 0 2.625rem 0 5rem;
+        background-color: map-get($colors, white);
+        border-radius: 2px;
+    }
+}
