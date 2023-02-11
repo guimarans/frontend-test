@@ -1,12 +1,12 @@
 header {
     position: relative;
-    margin-bottom: 15px;
     min-height: 190px;
+    margin-bottom: 18px;
+    
     picture { 
         img {
             position: absolute;
             left: -12px;
-            top: 20px;
         }
 
         @media(min-width: 420px) { 

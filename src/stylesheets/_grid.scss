@@ -32,11 +32,11 @@ body {
         .ranking {
             &__item {
                 @extend %grid;
-                gap: 18px 14px; 
             }
             &__content {
                 @extend %grid;
-                grid-template-columns: 76px 1fr;
+                grid-column-gap: 1.25rem;
+                grid-template-columns: 68px 1fr;
                 grid-template-areas: 
                     "ranking-picture ranking-info"
             }
