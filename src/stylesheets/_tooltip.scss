@@ -6,6 +6,7 @@
         top: 0;
         bottom: 0;
         align-items: center;
+        cursor: default;
         @media(min-width:760px) {
             right: -11.6rem;
         }
@@ -33,7 +34,7 @@
             @media(min-width: 760px) {
                 box-shadow: none;
             }
-            
+
             thead {
                 background-color: map-get($colors, red);
                 th {

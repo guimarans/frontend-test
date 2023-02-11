@@ -242,6 +242,7 @@ header h1 {
   top: 0;
   bottom: 0;
   align-items: center;
+  cursor: default;
 }
 @media (min-width: 760px) {
   .tooltip__content {
