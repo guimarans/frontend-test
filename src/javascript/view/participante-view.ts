@@ -22,20 +22,22 @@ export class ParticipanteView extends View<Participantes>{
                     </div>
                 </div>
 
-                <table class="tooltip__content">
-                    <thead>
-                        <tr>
-                            <th>Gostam</th>
-                            <th>Nao gostam</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>${(participante.porcentagemPositiva || 0).toFixed(0)}%</td>
-                            <td>${(participante.porcentagemNegativa || 0).toFixed(0)}%</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="tooltip__content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>GOSTAM</th>
+                                <th>NÃO GOSTAM</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>${(participante.porcentagemPositiva || 0).toFixed(0)}%</td>
+                                <td>${(participante.porcentagemNegativa || 0).toFixed(0)}%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             `;
         }).join('')}`;

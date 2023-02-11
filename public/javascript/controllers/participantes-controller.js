@@ -13,14 +13,26 @@ export class ParticipantesController {
     ordernarLista() {
         this.participantesServices.obterParticipantes()
             .then(participantes => {
-            participantes.sort((a, b) => {
-                if (a.porcentagemPositiva < b.porcentagemPositiva) {
-                    return -1;
-                }
-                else {
-                    return 1;
-                }
-            }).reverse();
+            if (window.navigator.userAgent.indexOf("Firefox") > -1) {
+                participantes.sort((a, b) => {
+                    if (a.porcentagemPositiva < b.porcentagemPositiva) {
+                        return -1;
+                    }
+                    else {
+                        return 1;
+                    }
+                }).reverse();
+            }
+            else {
+                participantes.sort((a, b) => {
+                    if (a.porcentagemPositiva > b.porcentagemPositiva) {
+                        return -1;
+                    }
+                    else {
+                        return 1;
+                    }
+                });
+            }
             for (let participante of participantes) {
                 this.participantes.adicionar(participante);
             }
