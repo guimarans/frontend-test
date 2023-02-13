@@ -27,14 +27,13 @@
     
     &__picture {
         position: relative;
-        max-width: 67px;
-        img {
-            display: block;
-            width: 59px;
-            height: 58px;
-            @extend %border-radius-100;
-            border: 4px solid map-get($colors, red);
-        }
+        width: 67px;
+        height: 66px;
+        @extend %border-radius-100;
+        border: 4px solid map-get($colors, red);
+        background-size: cover;
+        background-position: center;
+        img { visibility: hidden; }
     }
 
     &__bullet {
@@ -74,9 +73,7 @@
         background-color: map-get($colors, red);
 
         .ranking {
-            &__picture{
-                img { border: 4px solid map-get($colors, white); }
-            }
+            &__picture{ border: 4px solid map-get($colors, white); }
 
             &__info {
                 h2 { color: map-get($colors, white); }

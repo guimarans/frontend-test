@@ -9,7 +9,7 @@
     "start": "concurrently \"npm run scss\" \"npm run watch\" \"npm run server\"",
     "compile": "tsc",
     "watch": "tsc -watch",
-    "scss": "sass --watch src/stylesheets/:public/stylesheets/"
+    "scss": "sass --watch src/stylesheets/:public/stylesheets/ --style=compressed"
   },
   "author": "Kelly Guimarans",
   "license": "ISC",
