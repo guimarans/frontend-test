@@ -43,4 +43,3 @@ export class ParticipantesController {
         this.participanteView.update(this.participantes);
     }
 }
-//# sourceMappingURL=participantes-controller.js.map

@@ -9,4 +9,3 @@ export class Participantes {
         return this.participantes;
     }
 }
-//# sourceMappingURL=participantes.js.map

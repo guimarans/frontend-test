@@ -40,4 +40,3 @@ export class ParticipanteView extends View {
         }).join('')}`;
     }
 }
-//# sourceMappingURL=participante-view.js.map

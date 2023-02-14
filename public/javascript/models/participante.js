@@ -15,4 +15,3 @@ export class Participante {
         return (this.negative * 100) / total;
     }
 }
-//# sourceMappingURL=participante.js.map
