@@ -27,3 +27,7 @@ npm install
 npm start
 ```
 
+para rodar o teste abrir o terminal e digitar
+```sh
+npm test
+```
