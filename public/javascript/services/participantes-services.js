@@ -6,7 +6,6 @@ export class ParticipantesServices {
             .then(resp => resp.data)
             .then((dados) => {
             return dados.map(participante => {
-                console.log(participante);
                 return new Participante(participante.name, participante.description, participante.picture, participante.positive, participante.negative);
             });
         });

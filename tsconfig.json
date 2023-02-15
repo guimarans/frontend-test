@@ -7,7 +7,15 @@
         "removeComments": true,
         "strictNullChecks": true,
         "experimentalDecorators": true,
-        "moduleResolution": "Node"
+        "moduleResolution": "Node",
+        "esModuleInterop": true
     },
-    "include": [ "src/javascript/**/*" ]
+    "include": [ "src/javascript/**/*" ],
+    "exclude": [
+        "node_modules",
+        "public_html",
+        "test",
+        "src/javascript/**/*.spec.ts",
+        "src/javascript/**/*.test.ts"
+     ]
 }
